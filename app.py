@@ -594,7 +594,7 @@ def get_html_content():
                 • Mouth Open: ${data.debug.mouth_open}<br>
                 • Eyes Closed: ${data.debug.eyes_closed}<br>
                 • Gaze: ${data.debug.gaze_direction}<br>
-                • Hands: ${data.debug.hand_gestures.join(', ') || 'None'}<br>
+                • Hands: ${data.debug.hand_gestures ? data.debug.hand_gestures.join(', ') : 'None'}<br>
                 • Mode: ${data.debug.mode}<br>
                 • Time: ${new Date().toLocaleTimeString()}
             `;
